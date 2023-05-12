@@ -1,0 +1,21 @@
+.message {
+  text-transform: var(--transform-primary);
+  display: grid;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1em;
+  height: 1.5em;
+  font-size: var(--fs-small);
+  border-radius: 0.25em;
+  letter-spacing: 0.5em;
+}
+
+.message-danger {
+  color: #721c24;
+  background: #f8d7da;
+}
+
+.message-success {
+  color: #155724;
+  background: #d4edda;
+}

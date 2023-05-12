@@ -1,0 +1,8 @@
+.grocery-container {
+  margin-top: 2em;
+  visibility: hidden;
+}
+
+.show-container {
+  visibility: visible;
+}

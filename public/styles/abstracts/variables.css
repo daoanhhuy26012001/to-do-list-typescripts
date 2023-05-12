@@ -1,0 +1,39 @@
+:root {
+  /* COLOR */
+  --color-blue-medium: #a5d5f8;
+  --color-blue-normal: #49a6e9;
+  --color-blue-dark: #063251;
+  --color-red-light: #e66b6b;
+  --color-red-dark: #bb2525;
+  --color-green-dark: #25bb32;
+  --color-green-light: #6be675;
+  --color-grey-dark: #617d98;
+  --color-grey: #f1f5f8;
+  --color-white: #ffffff;
+
+  /* FONT FAMILY */
+  --ff-primary: 'Open Sans', sans-serif;
+  --ff-secondary: 'Roboto', sans-serif;
+
+  /* FONT SIZE */
+  --fs-small: 0.7em;
+  --fs-medium: 0.85em;
+  --fs-normal: 1em;
+  --fs-large: 1.75em;
+
+  /* TRANSITION */
+  --transition-primary: all 0.3s linear;
+
+  /* RADIUS */
+  --radius-primary: 0.5em;
+
+  /* LETTER-SPACING */
+  --spacing-primary: 0.125em;
+
+  /* TEXT-TRANSFORM */
+  --transform-primary: capitalize;
+
+  /* BOX-SHADOW */
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,14 @@
+.wrapper {
+  background: var(--color-white);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition-primary);
+  max-width: 35em;
+  margin: 0 auto;
+  margin-top: 8em;
+  padding: 2em;
+  border-radius: 0.5em;
+}
+
+.wrapper:hover {
+  box-shadow: var(--dark-shadow);
+}

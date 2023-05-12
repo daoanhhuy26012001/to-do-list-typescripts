@@ -1,0 +1,10 @@
+.form-input {
+  background: var(--color-grey);
+  border-top-left-radius: var(--radius-primary);
+  border-bottom-left-radius: var(--radius-primary);
+  font-size: var(--fs-normal);
+  color: var(--color-grey-dark);
+  border-color: transparent;
+  padding: 0.25em 0.25em 0.25em 1em;
+  flex: 1 0 auto;
+}

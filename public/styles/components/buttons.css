@@ -1,0 +1,68 @@
+/* DEFAULT BUTTON */
+.btn {
+  transition: var(--transition-primary);
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  text-transform: capitalize;
+  align-items: center;
+  display: flex;
+  font-size: var(--fs-medium);
+}
+
+/* BTN-SUBMIT */
+.btn-submit {
+  background: var(--color-blue-medium);
+  border-top-right-radius: var(--radius-primary);
+  border-bottom-right-radius: var(--radius-primary);
+  letter-spacing: var(--spacing-primary);
+  flex: 0 0 5em;
+  padding: 0.5em;
+  justify-content: center;
+}
+
+.btn-submit:hover {
+  color: var(--color-white);
+  background-color: var(--color-blue-normal);
+}
+
+/* BTN-CLEAR */
+.btn-clear {
+  color: var(--color-red-light);
+  letter-spacing: 0.25em;
+  margin-top: 1em;
+}
+
+.btn-clear:hover {
+  color: var(--color-red-dark);
+}
+
+/* THE ICON BUTTON */
+.btn-container {
+  display: flex;
+  gap: 0.3125em;
+}
+
+.btn-container .btn {
+  background: transparent;
+  font-size: var(--fs-small);
+  margin: 0 0.15em;
+}
+
+/* BTN-EDIT */
+.btn-edit {
+  color: var(--color-green-light);
+}
+
+.btn-edit:hover {
+  color: var(--color-green-dark);
+}
+
+/* BTN-DELETE */
+.btn-delete {
+  color: var(--color-red-light);
+}
+
+.btn-delete:hover {
+  color: var(--color-red-dark);
+}

@@ -1,0 +1,17 @@
+.grocery-item {
+  text-transform: var(--transform-primary);
+  transition: var(--transition-primary);
+  letter-spacing: var(--spacing-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+}
+
+.grocery-item:hover {
+  color: var(--color-grey-dark);
+  background-color: var(--color-grey);
+}
