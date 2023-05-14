@@ -1,6 +1,6 @@
 import { getLocalStorage } from '../helpers/getItemLocalStorage'
 
-export const addItemToLocalStorage = (key: string, item: any) => {
+export const addItemToLocalStorage = <T>(key: string, item: T) => {
   const listItem = getLocalStorage(key)
 
   listItem.push(item)
