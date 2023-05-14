@@ -1,11 +1,12 @@
 import { MESSAGE_NOTIFICATION } from '../config/constants'
 import { handleCreateNewItem } from '../controllers/handleCreateItem'
+import { handleEditItem } from '../controllers/handleUpdateItem'
 import { displayMessage } from '../views/displayMessageNotification'
 
 export const handleSubmitForm = (event: Event) => {
   event.preventDefault()
 
-  // const groceryForm = document.querySelector<HTMLFormElement>('#grocery-form')
+  const groceryForm = document.querySelector<HTMLFormElement>('#grocery-form')
   const groceryField = document.querySelector<HTMLInputElement>('.form-input')
   const itemValue = groceryField?.value
 
@@ -16,11 +17,11 @@ export const handleSubmitForm = (event: Event) => {
     return
   }
 
-  // if (groceryForm?.hasAttribute('data-edit')) {
-  //   // handleEditItem()
+  if (groceryForm?.hasAttribute('data-edit')) {
+    handleEditItem()
 
-  //   return
-  // }
+    return
+  }
 
   handleCreateNewItem()
 }
