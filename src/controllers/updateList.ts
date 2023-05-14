@@ -1,5 +1,11 @@
 import { getLocalStorage } from '../helpers/getItemLocalStorage'
-import { GROCERY_COLLECT_PRODUCTS } from '../config/constants'
+import { deleteItemFromLocalStorage } from '../helpers/removeItemLocalStorage'
+import {
+  GROCERY_COLLECT_PRODUCTS,
+  MESSAGE_NOTIFICATION,
+} from '../config/constants'
+import { showGroceryContainer } from '../views/showList'
+import { displayMessage } from '../views/displayMessageNotification'
 
 export const listenerUpdateList = (event: Event) => {
   event.preventDefault()
@@ -10,7 +16,27 @@ export const listenerUpdateList = (event: Event) => {
   const currentBtn = (event.target as Element)?.parentElement
 
   // Get the parent element of the button, which is the item element
-  const currentItem = currentBtn?.closest('.grocery-item')
+  const currentItem =
+    (currentBtn?.closest('.grocery-item') as HTMLLIElement | null) ?? null
+
+  if (currentBtn?.classList.contains('btn-delete')) {
+    const id = currentItem?.dataset.edit || ''
+    const groceryList = document.querySelector<HTMLUListElement>(
+      '.grocery-container .grocery-list'
+    )
+
+    deleteItemFromLocalStorage(GROCERY_COLLECT_PRODUCTS, id)
+
+    currentItem?.remove()
+
+    if (groceryList?.children.length == 0) {
+      showGroceryContainer(false)
+    }
+
+    displayMessage(MESSAGE_NOTIFICATION.remove)
+
+    return
+  }
 
   // If the clicked button has a class of 'btn-edit'
   if (currentBtn?.classList.contains('btn-edit')) {
