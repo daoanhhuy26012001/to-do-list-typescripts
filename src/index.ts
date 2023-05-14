@@ -1,2 +1,12 @@
-const groceryForm = document.getElementById('#form') as HTMLFormElement | null;
-console.log(groceryForm);
+import { handleSubmitForm } from './controllers/handleSubmitForm'
+import { renderList } from './controllers/renderList'
+
+const setupForm = () => {
+  const groceryForm = document.querySelector<HTMLFormElement>('#grocery-form')
+
+  groceryForm?.addEventListener('submit', handleSubmitForm)
+
+  renderList()
+}
+
+setupForm()
